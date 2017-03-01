@@ -44,6 +44,4 @@ Finally, `ESP.deepSleep(num_seconds_to_sleep * 1000000, RF_DEFAULT);` sends the 
 
 Looking at a current meter shows that during sleep, very little power is consumed (my USB charger doctor has 3 digits, so anything below 0.01 amps is displayed as 0). When resetting, the current meter goes up to 0.07A.
 
-From the output of `value` it's clear that we lost our SRAM contents. How can we save variables for later usage?
-
-See [here](../02_default_nowifi_retainvars) :-)
+From the output of `value` it's clear that we lost our SRAM contents every time the device goes to sleep. [How can we save variables for later usage?](../02_default_nowifi_retainvars/README.md)
