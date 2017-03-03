@@ -49,7 +49,8 @@ started fresh and need to set values to zero. If it matches a given signature,
 we woke up from sleep (and had sane values from before). This is a quick work-around,
 a better implementation could additionally store and calculate a hash value over all struct fields to see if the structure is valid or not.
 
-In `loop()` we always query our data structure via the functions above, into a stack-local variable, to always get the correct values from EEPROM:
+In `loop()` we always query our data structure via the functions above, into a stack-local variable, to always get the correct values from EEPROM.
+After modifying them, we save back to EEPROM:
 
 ```
 void loop() {
@@ -63,4 +64,24 @@ void loop() {
 }
 ```
 
-Good, [but still no WiFi](../03_default_wifi/README.md)!
+Which yields:
+
+```
+$ pio device monitor
+--- Miniterm on /dev/cu.SLAB_USBtoUART  9600,8,N,1 ---
+--- Quit: Ctrl+C | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---
+��fu��H��0�~?�4�Ҷ␖��␔OK␌A�����setup()
+in loop()
+Updated struct to: value=2,flag=false
+ �n?�$�Ҧ␆��␔OCAQ�����setup()
+in loop()
+Updated struct to: value=3,flag=true
+ �n?�$�¦␆��␔OCAq�����setup()
+in loop()
+Updated struct to: value=4,flag=false
+
+--- exit ---
+```
+
+Good, values survive deep sleep. [But still no WiFi...](../03_default_wifi/README.md)
+

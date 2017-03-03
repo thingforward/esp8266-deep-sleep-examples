@@ -17,13 +17,8 @@ void setup() {
 	Serial.println("setup()");
 
 	pinMode(D0,WAKEUP_PULLUP);
-}
 
-void loop() {
-  Serial.println("in loop()");
-
-	// If not connected, do so.
-  if ( WiFi.status() != WL_CONNECTED) {
+	if ( WiFi.status() != WL_CONNECTED) {
     WiFi.mode(WIFI_STA);
     WiFi.begin(ssid, password);
 
@@ -31,11 +26,14 @@ void loop() {
       Serial.print(".");
       delay(100);
     }
-
-		// do something with WiFi here
-		Serial.println("We're connected, do something with wifi..");
-		delay(500);
 	}
+}
+
+void loop() {
+  Serial.println("in loop()");
+	// do something with WiFi here
+	Serial.println("We're connected, do something with wifi..");
+	delay(500);
 
   Serial.print("deep sleep, num_seconds="); Serial.println(num_seconds_to_sleep);
 	// go do deep sleep, keep RF on
