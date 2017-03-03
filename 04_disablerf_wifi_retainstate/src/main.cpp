@@ -3,10 +3,8 @@
 #include <ESP8266WiFi.h>
 #include <EEPROM.h>
 
-//const char* ssid     = "ThingForwardWiFi";
-//const char* password = "thingforwardiot";
-const char* ssid     = "Andreass iPhone";
-const char* password = "iotthingforward";
+const char* ssid     = "ThingForwardWiFi";
+const char* password = "thingforwardiot";
 
 #define CONNECT_STATE_NONE				0
 #define CONNECT_STATE_PREPARE			1
