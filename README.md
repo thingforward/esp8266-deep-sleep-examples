@@ -14,7 +14,7 @@ The examples do not come with a build system, but can be run using [PlatformIO](
 
 4 flavors:
 
-* [The bare minimum of understanding deep sleep](01_default_nowifi/README.md)
-* [How to retain variables](02_default_nowifi_retainvars/README.md)
-* [Wifi](03_default_wifi/README.md)
-* [Wifi, extra power save](04_disablerf_wifi_retainstate/README.md)
+* [01_default_nowifi: The bare minimum for playing with deep sleep](01_default_nowifi/README.md)
+* [02_default_nowifi_retainvars: How to retain variables](02_default_nowifi_retainvars/README.md)
+* [03_default_wifi: Wifi](03_default_wifi/README.md)
+* [04_disablerf_wifi_retainstate, Wifi, extra power save by disabling RF](04_disablerf_wifi_retainstate/README.md)
