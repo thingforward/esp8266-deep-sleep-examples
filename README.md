@@ -10,7 +10,7 @@ When you tried deep sleep on an ESP8266 and wondered,
 
 then please read on.
 
-The examples do not come with a build system, but can be run using [PlatformIO](www.platformio.org).
+The examples do not come with a build system, but can be run using [PlatformIO](http://www.platformio.org).
 
 4 flavors:
 
